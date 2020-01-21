@@ -1,13 +1,4 @@
-2020-01-16 17:05:40,644 ERROR: Exception on /edit_profile [POST] [in /Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.IntegrityError: UNIQUE constraint failed: user.username
-
-The above exception was the direct cause of the following exception:
-
+2020-01-20 17:18:29,368 ERROR: Exception on /user/susan [GET] [in /Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -23,61 +14,38 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/routes.py", line 85, in edit_profile
-    db.session.commit()
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
-    self.transaction.commit()
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 503, in commit
-    self._prepare_impl()
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
-    self.session.flush()
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2479, in flush
-    self._flush(objects)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2617, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
-    raise value
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2577, in _flush
-    flush_context.execute()
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
-    uow,
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
-    update,
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 996, in _emit_update_statements
-    statement, multiparams
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
-    return meth(self, multiparams, params)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
-    distilled_params,
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
-    e, statement, parameters, cursor, context
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
-    util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/routes.py", line 70, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
-[SQL: UPDATE user SET username=? WHERE user.id = ?]
-[parameters: ('john', 1)]
-(Background on this error at: http://sqlalche.me/e/gkpj)
-2020-01-16 17:09:17,027 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
-2020-01-17 15:28:28,206 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
-2020-01-17 15:28:38,904 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
-2020-01-17 17:23:21,914 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
-2020-01-17 17:28:05,394 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
-2020-01-17 17:41:23,364 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
-2020-01-17 17:43:37,262 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
-2020-01-17 17:43:56,170 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
+  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/templates/user.html", line 14, in root
+    <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following.</p>
+  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/templates/base.html", line 54, in root
+  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/templates/user.html", line 58, in block_content
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/werkzeug/routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'follow' with values ['username']. Did you mean 'login' instead?
