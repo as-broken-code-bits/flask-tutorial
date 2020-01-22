@@ -1,4 +1,4 @@
-2020-01-20 17:18:29,368 ERROR: Exception on /user/susan [GET] [in /Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/app.py:1891]
+2020-01-21 16:38:38,280 ERROR: Exception on / [GET] [in /Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/routes.py", line 70, in user
-    return render_template('user.html', user=user, posts=posts)
+  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/routes.py", line 24, in index
+    return render_template('index.html', title = 'Home', posts=posts)
   File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
   File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
@@ -28,24 +28,15 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/templates/user.html", line 1, in top-level template code
+  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
   File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
     return concat(self.root_render_func(self.new_context(vars)))
-  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/templates/user.html", line 14, in root
-    <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following.</p>
+  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/templates/index.html", line 14, in root
+    <p>{{ form.submit() }}</p>
   File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/templates/base.html", line 54, in root
-  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/templates/user.html", line 58, in block_content
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
-    return __obj(*args, **kwargs)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/werkzeug/routing.py", line 2020, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'follow' with values ['username']. Did you mean 'login' instead?
+  File "/Users/aliya/code-stuff/non-school-code/flask-tutorial/app/templates/index.html", line 26, in block_content
+  File "/Users/aliya/.local/share/virtualenvs/flask-tutorial-9-r7p8DH/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2020-01-21 16:51:31,657 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
