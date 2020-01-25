@@ -41,3 +41,4 @@ Traceback (most recent call last):
 jinja2.exceptions.UndefinedError: 'form' is undefined
 2020-01-21 16:51:31,657 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
 2020-01-21 17:03:58,750 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
+2020-01-24 17:29:05,908 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:44]
