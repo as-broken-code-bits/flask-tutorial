@@ -48,3 +48,5 @@ jinja2.exceptions.UndefinedError: 'form' is undefined
 2020-01-27 09:37:18,837 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:46]
 2020-01-27 09:45:49,865 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:46]
 2020-01-30 17:14:22,037 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:46]
+2020-01-30 17:25:10,095 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:46]
+2020-01-30 17:26:08,245 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:46]
