@@ -90,3 +90,6 @@ Traceback (most recent call last):
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: bootstap/base.html
 2020-02-04 14:45:05,500 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:48]
+2020-02-05 11:22:43,626 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:50]
+2020-02-05 11:23:40,348 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:50]
+2020-02-05 11:24:23,399 INFO: Microblog startup [in /Users/aliya/code-stuff/non-school-code/flask-tutorial/app/__init__.py:50]
